@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif !important;
+}
+
+@mixin forTitleDec() {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBottom;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: $marginBottom;
+}
+
+@mixin leftRightBorder() {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.title {
+    @include forTitleDec();
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #e3f1f7;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.datatable {
+    padding: 10px;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+
+    table {
+        width: 100%;
+        border-bottom: 1.5px solid #ababab;
+
+        tr {
+            th {
+                // @include leftRightBorder();
+                padding: 5px;
+                font-size: $tableFont;
+                padding: $thTdPaddingTB $thTdPaddingRL;
+                background: #15d3a1;
+                color: $fontColor;
+                cursor: pointer;
+                position: relative;
+
+                .up-down {
+
+                    .fa-angle-up {
+                        position: absolute;
+                        right: 10px;
+                        top: 4px;
+                        color: $arrowColor;
+                    }
+
+                    .fa-angle-down {
+                        position: absolute;
+                        right: 10px;
+                        top: 13px;
+                        color: $arrowColor;
+                    }
+
+                }
+            }
+
+            td {
+                // @include leftRightBorder();
+                padding: 5px;
+                font-size: $tableFont;
+                padding: $thTdPaddingTB $thTdPaddingRL;
+                color: $tdFontColor;
+            }
+        }
+
+        tr:nth-child(even) {
+            background: #dcfff6;
+        }
+    }
+}
+
+.paginationBox {
+    float: right;
+    margin-top: 30px;
+
+    .page-link {
+        -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+        /* Standard syntax */
+    }
+
+    li{
+        a{
+            font-size: 14px;
+            color: #4d4d4d;
+        }
+    }   
+}
+
+.active>.page-link,
+.page-link.active {
+    background-color: #15d3a1 !important;
+    border-color: #15d3a1 !important;
+
+    &:hover{
+        color: $fontColor !important;
+    }
+}
+
+#show_entries {
+    width: 85px;
+    font-size: 13px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #797979;
+}
+
+.search {
+    position: relative;
+
+    &:after {
+        content: '\f002';
+        font-family: FontAwesome;
+        width: 50px;
+        height: 50px;
+        color: #000;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+#no_of_show_page {
+    display: block;
+    margin-top: 40px;
+    color: #626262;
+    font-size: 14px;
+}
+
+.no-data {
+    display: block;
+    padding: 10px;
+    color: #ff0000;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+}
+
+#searchBox {
+    position: relative;
+    width: 245px;
+    height: 33px;
+    float: right;
+    margin-top: 23px;
+    font-size: 14px;
+}
+
+@mixin forFocus(){
+    border-color: $borderColor;
+    box-shadow: $focusShadow;
+}
+
+.form-control:focus,
+.form-select:focus{
+   @include forFocus();
+}
+
+.page-link{
+    
+    &:focus{
+        @include forFocus();
+    }
+   
+    &:hover{
+        color: $borderColor;
+    }
+}

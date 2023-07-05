@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="title">
+                Data Table
+            </div>
+            <div class="datatable">
+                <div class="row mb-4">
+                    <div class="col-lg-6">
+                        <label for="entries">Show Entries:</label>
+                        <select id="show_entries" class="form-select">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control search" list="datalistOptions" id="searchBox"
+                            placeholder="Type to search...">
+                    </div>
+                </div>
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th type="number">
+                                S. No.
+                               
+                            </th>
+                            <th type="string">Name
+                                
+                            </th>
+                            <th type="number">Contact No.
+                              
+                            </th>
+                            <th type="string">Designation
+                               
+                            </th>
+                            <th type="number">Amount
+                               
+                            </th>
+                            <th type="string">Feedback
+                               
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="allData">
+                        <tr>
+                            <td>1.</td>
+                            <td>Suresh</td>
+                            <td>+91 9876543210</td>
+                            <td>TL</td>
+                            <td>30,000</td>
+                            <td>Hard Working</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Dinesh</td>
+                            <td>+91 9864673256</td>
+                            <td>MG</td>
+                            <td>50,000</td>
+                            <td>Excellent Working</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>Ramesh</td>
+                            <td>+91 9836576387</td>
+                            <td>Executive</td>
+                            <td>20,000</td>
+                            <td>Sharp Minded</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Suman</td>
+                            <td>+91 9864756392</td>
+                            <td>Sr. Executive</td>
+                            <td>25,000</td>
+                            <td>Good Working</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>Shalu</td>
+                            <td>+91 8687975964</td>
+                            <td>Sr. Executive</td>
+                            <td>25,000</td>
+                            <td>Good Working</td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>Aaradhya </td>
+                            <td>+91 7654324526</td>
+                            <td>TL</td>
+                            <td>25,000</td>
+                            <td>Great going</td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td>Adah </td>
+                            <td>+91 8976532565</td>
+                            <td>MG</td>
+                            <td>60,000</td>
+                            <td>appreciate your cooperation.</td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td>Gulika </td>
+                            <td>+91 9876534545</td>
+                            <td>Executive</td>
+                            <td>18,000</td>
+                            <td>Outstanding</td>
+                        </tr>
+                        <tr>
+                            <td>9.</td>
+                            <td>Geetika </td>
+                            <td>+91 8764568929</td>
+                            <td>Sr. Executive</td>
+                            <td>35,000</td>
+                            <td>Resounding results</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Shalu</td>
+                            <td>+91 6789564324</td>
+                            <td>Sr. Executive</td>
+                            <td>28,000</td>
+                            <td>Sensational</td>
+                        </tr>
+                        <tr>
+                            <td>11.</td>
+                            <td>Hiya </td>
+                            <td>+91 8776577678</td>
+                            <td>TL</td>
+                            <td>30,000</td>
+                            <td>Sharp thinking</td>
+                        </tr>
+                        <tr>
+                            <td>12.</td>
+                            <td>Dinesh</td>
+                            <td>+91 8976532565</td>
+                            <td>MG</td>
+                            <td>45,000</td>
+                            <td>Honorable</td>
+                        </tr>
+                        <tr>
+                            <td>13.</td>
+                            <td>Ishana </td>
+                            <td>+91 6789564324</td>
+                            <td>Executive</td>
+                            <td>19,000</td>
+                            <td>Superb</td>
+                        </tr>
+                        <tr>
+                            <td>14.</td>
+                            <td>Jeevika </td>
+                            <td>+91 9864756392</td>
+                            <td>Sr. Executive</td>
+                            <td>24,000</td>
+                            <td>Supreme</td>
+                        </tr>
+                        <tr>
+                            <td>15.</td>
+                            <td>Larisa </td>
+                            <td>+91 8687975964</td>
+                            <td>Sr. Executive</td>
+                            <td>27,000</td>
+                            <td>Good Working</td>
+                        </tr>
+                        <tr>
+                            <td>16.</td>
+                            <td>Mirai </td>
+                            <td>+91 8976532565</td>
+                            <td>TL</td>
+                            <td>35,000</td>
+                            <td>Hard Working</td>
+                        </tr>
+                        <tr>
+                            <td>17.</td>
+                            <td>Navya </td>
+                            <td>+91 9864673256</td>
+                            <td>MG</td>
+                            <td>50,000</td>
+                            <td>Excellent Working</td>
+                        </tr>
+                        <tr>
+                            <td>18.</td>
+                            <td>Pavati </td>
+                            <td>+91 9836576387</td>
+                            <td>Executive</td>
+                            <td>25,000</td>
+                            <td>Marvelous</td>
+                        </tr>
+                        <tr>
+                            <td>19.</td>
+                            <td>Anika </td>
+                            <td>+91 9864756392</td>
+                            <td>Sr. Executive</td>
+                            <td>26,000</td>
+                            <td>Good Working</td>
+                        </tr>
+                        <tr>
+                            <td>20.</td>
+                            <td>Dilreet </td>
+                            <td>+91 8687975964</td>
+                            <td>Sr. Executive</td>
+                            <td>28,000</td>
+                            <td>Good thinking</td>
+                        </tr>
+                        <tr>
+                            <td>21.</td>
+                            <td>Bisanpreet </td>
+                            <td>+91 8776577678</td>
+                            <td>TL</td>
+                            <td>40,000</td>
+                            <td>Hard Working</td>
+                        </tr>
+                        <tr>
+                            <td>22.</td>
+                            <td>Gurmeet </td>
+                            <td>+91 9864673256</td>
+                            <td>MG</td>
+                            <td>45,000</td>
+                            <td>Excellent Working</td>
+                        </tr>
+                        <tr>
+                            <td>23.</td>
+                            <td>Ishmeet </td>
+                            <td>+91 9836576387</td>
+                            <td>Executive</td>
+                            <td>17,000</td>
+                            <td>Great going</td>
+                        </tr>
+                        <tr>
+                            <td>24.</td>
+                            <td>Tavleen </td>
+                            <td>+91 9864756392</td>
+                            <td>Sr. Executive</td>
+                            <td>25,000</td>
+                            <td>Impressive</td>
+                        </tr>
+                        <tr>
+                            <td>25.</td>
+                            <td>Paakhi </td>
+                            <td>+91 8976532565</td>
+                            <td>Sr. Executive</td>
+                            <td>30,000</td>
+                            <td>Right on target</td>
+                        </tr>
+                        <tr>
+                            <td>26.</td>
+                            <td>Bisanpreet </td>
+                            <td>+91 8776577678</td>
+                            <td>TL</td>
+                            <td>40,000</td>
+                            <td>Hard Working</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p><span id="no_of_show_page"> </span> </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="paginationBox" id="pagination_box" aria-label="...">
+                            <ul class="pagination" id="pagination"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- custom js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
